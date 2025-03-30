@@ -1,0 +1,26 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: cornsilk;
+}
+
+/* Heading styles */
+h1{
+  margin: 1rem 0;
+  color: crimson;
+  padding: 1.2rem 0;
+  text-align: center;
+  border: 6px crimson double;
+  font-size: 2.5rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
