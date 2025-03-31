@@ -34,6 +34,14 @@ class MovieList {
   }
 
   // Generate a movieList based on a search term
+  genMovieSearchList(list){
+    // Loop through the list
+    for(let i = 0; i < list.length; i++){
+      let movie = list[i];
+      // Call the movieRow function to generate a row.
+      this.movieRow(movie.title, movie.year);
+    }
+  }
 
   // Remove all list elements from the DOM
   removeElements(){
@@ -88,6 +96,32 @@ class MovieList {
   }
 
   // sortA2Z - sorting the movieList in ascending order
+  sortA2Z(){
+    this.movieList.sort(function(a, b){
+      return a.title.localeCompare(b.title);
+    });
+  }
+
   // sortZ2a - sorting the movieList in descending order
+  sortZ2AZ(){
+    this.movieList.sort(function(a, b){
+      return b.title.localeCompare(a.title);
+    });
+  }
+
   // Search - search by partial title
+  search(nameString){
+    // Create an array to hold the search results;
+    let shortList = [];
+    // Use a loop to check if the nameString is in any movie title.
+    for(let movie of this.movieList){
+      // Check for nameString in the title
+      if(movie.title.includes(nameString)){
+        // if the nameString is in the movie title, add this to our shortList.
+        shortList.push(movie);
+      }
+    }
+    // Generate the list to display
+    this.genMovieSearchList(shortList);
+  }
 }
