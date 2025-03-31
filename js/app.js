@@ -1,4 +1,12 @@
 // Create an array movies
+let initMovies = [
+  {title: "The Shawshank Redemption", year: 1994},
+  {title: "The Godfather", year: 1972},
+  {title: "The Godfather: Part II", year: 1974},
+  {title: "The Dark Knight", year: 2008},
+  {title: "Krull", year: 1983},
+  {title: "The Last Starfighter", year: 1981},
+]
 
 // Create an instance of the MovieList class
 // MovieList takes in the rootId and the movie array
