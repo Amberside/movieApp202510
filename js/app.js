@@ -24,6 +24,23 @@ let movieList = new MovieList('list', initMovies);
 // D - Delete - detele Content
 
 // Add a new movie to the list (create)
+function addClick(){
+  // Get the add form elements from the DOM
+  let formElements = document.getElementById("form-add").elements;
+  // Get the movie title from the form
+  let title = formElements["title"].value;
+  // Get the year from the form
+  let year = formElements["year"].value;
+  // Add in validation
+  // We can test our year and title here.
+  // We can add in rules to test our input.
+
+  // Save the new movie into the lsit.
+  movieList.add(title, Number(year));
+  // Clear the input fields
+  formElements.title.value = "";
+  formElements.year.value = "";
+}
 // Update a movie in the list (update)
 // Delete a movie in the lsit (delete)
 
