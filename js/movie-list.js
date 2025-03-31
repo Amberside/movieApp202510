@@ -49,15 +49,11 @@ class MovieList {
     const rootElement = document.getElementById(this.rootId);
     // Get all elements with the class name of row.
     const childNodes = document.getElementsByClassName('row');
-    console.log(childNodes);
     // How many children do we have
     const len = childNodes.length - 1;
-    console.log(len);
     for(let i = len; i >= 0; i--){
-      console.log(i)
       // Get the last element in the array
       const child = childNodes[i];
-      console.log(child);
       // Remove that element from the DOM
       rootElement.removeChild(child);
     }

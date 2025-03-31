@@ -79,7 +79,7 @@ function updateClick(){
 }
 
 // Delete a movie in the list (delete)
-function updateClick(){
+function deleteClick(){
   // Get the add form elements from the DOM
   let indexElement = document.getElementById("delIndex");
   let index = indexElement.value - 1;
