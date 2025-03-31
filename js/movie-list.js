@@ -59,6 +59,14 @@ class MovieList {
     this.genMovieList();
   }
   // Add function - add a new movie
+  add(title, year){
+    // Add a new movie to the end of the list.
+    this.movieList.push({title: title, year: year});
+    // Write this code another way (ES6)
+    // this.movieList.push({ title, year});
+    this.refresh();
+  }
+  
   // Update function - update a movie
   // Delete function - delete a movie
 
