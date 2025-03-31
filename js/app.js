@@ -23,8 +23,38 @@
 // Function openForm
 // Take in 2 parameters, an event and an action
 // Return nothing.
+function openForm(evt, action){
+  // declare variables
+  let i, tabContent, tabLinks;
+
+  // Get all elements that have the classname of tabcontent
+  tabContent = document.getElementsByClassName('tabcontent');
+  for(i = 0; i < tabContent.length; i++){
+    // set the display to none for all elements with the class name of tabcontent
+    tabContent[i].style.display = 'none';
+  }
+
+  // Get all the elements that have the class name of tablinks and remove the class of active.
+  tabLinks = document.getElementsByClassName('tablinks');
+  for(i = 0; i < tabLinks.length; i++){
+    // remove the active class
+    tabLinks[i].className = tabLinks[i].className.replace("active", "");
+  }
+
+  // Show the current tab and add the active class to the button that opened the tab
+  document.getElementById(action).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+// End of openForm()
 
 // Open tab by default.
+document.getElementById('defaultOpen').click();
 
 // Footer code
 // Get the date and inject it into the span located in the footer.
+// Get the span
+const dateSpan = document.getElementById("date");
+// Get the current date
+const theDate = new Date();
+// Add in the date to the DOM.
+dateSpan.textContent = theDate.getFullYear();
