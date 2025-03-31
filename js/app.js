@@ -14,6 +14,14 @@ let movieList = new MovieList('list', initMovies);
 
 // Event functions
 // Search Click
+function searchClick(){
+  // get the text elemetn from the DOM
+  let formElements = document.getElementById('form-list-control').elements;
+  // Get the text from the input box
+  let text = formElements['search-string'].value;
+  // Run the search method.
+  movieList.search(text);
+}
 // A to Z Click
 // Z to A Click
 
