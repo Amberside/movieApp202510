@@ -56,7 +56,42 @@ function addClick(){
   formElements.year.value = "";
 }
 // Update a movie in the list (update)
-// Delete a movie in the lsit (delete)
+function updateClick(){
+  // Get the add form elements from the DOM
+  let formElements = document.getElementById("form-update").elements;
+  // Get the index from the form
+  let index = formElements["index"].value - 1;
+  // Get the movie title from the form
+  let title = formElements["title"].value;
+  // Get the year from the form
+  let year = formElements["year"].value;
+  // Add in validation
+  // We can test our year and title here.
+  // We can add in rules to test our input.
+  // Test the index.
+
+  // Save the new movie into the lsit.
+  movieList.update(Number(index), title, Number(year));
+  // Clear the input fields
+  formElements.index.value = "";
+  formElements.title.value = "";
+  formElements.year.value = "";
+}
+
+// Delete a movie in the list (delete)
+function updateClick(){
+  // Get the add form elements from the DOM
+  let indexElement = document.getElementById("delIndex");
+  let index = indexElement.value - 1;
+  // Add in validation
+  // Test the index.
+  // Are you sure question? confirm.
+
+  // Save the new movie into the lsit.
+  movieList.delete(Number(index));
+  // Clear the input fields
+  indexElement.value = "";
+}
 
 // UI JavaScript
 // Tabs section
