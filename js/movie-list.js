@@ -12,11 +12,34 @@ class MovieList {
 
   // Methods
   // Generate one row of the movieList
+  movieRow(title, year){
+    // get the parent element
+    const rootElement = document.getElementById(this.rootId);
+    // Create a new li
+    const row = document.createElement('li');
+    // Create the text and add the class to the new li.
+    row.classList.add('row');
+    row.textContent = `${title} (${year})`;
+    // Add the new element to DOM.
+    rootElement.appendChild(row);
+  }
   // Generate All rows of the movieList
+  genMovieList(){
+    // Loop through the movieList.
+    for(let i = 0; i < this.movieList.length; i++){
+      let movie = this.movieList[i];
+      // Call the movieRow function to generate the row.
+      this.movieRow(movie.title, movie.year);
+    }
+  }
+  
   // Generate a movieList based on a search term
 
   // Remove all list elements from the DOM
   // Refresh function
+  refresh(){
+    this.genMovieList();
+  }
   // Add function - add a new movie
   // Update function - update a movie
   // Delete function - delete a movie
