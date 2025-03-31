@@ -53,6 +53,9 @@ class MovieList {
 
   // Refresh function
   refresh(){
+    // Remove elements
+    this.removeElements();
+    // Generate the movie list
     this.genMovieList();
   }
   // Add function - add a new movie
