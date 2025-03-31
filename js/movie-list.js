@@ -66,9 +66,26 @@ class MovieList {
     // this.movieList.push({ title, year});
     this.refresh();
   }
-  
+
   // Update function - update a movie
+  update(index, title, year){
+    // Update the title
+    this.movieList[index].title = title;
+    // Update the year
+    this.movieList[index].year = year;
+    // Refresh the list.
+    this.refresh();
+  }
+
   // Delete function - delete a movie
+  delete(index){
+    // Remove one movie from the array
+    // Note: we should really test the index here
+    // Test for out of bounds.
+    this.movieList.splice(index, 1);
+    // Refresh
+    this.refresh()
+  }
 
   // sortA2Z - sorting the movieList in ascending order
   // sortZ2a - sorting the movieList in descending order
