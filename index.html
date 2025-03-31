@@ -59,7 +59,7 @@
     <!-- Tab section -->
     <section class="tab">
       <!-- Buttons to change tabs -->
-       <button class="tablinks" onclick="openForm(event, 'Add')" id="defaultOpen">Add a New Movie</button>
+       <button class="tablinks" onclick="openForm(event, 'Add')" id="defaultOpen" class="active">Add a New Movie</button>
        <button class="tablinks" onclick="openForm(event, 'Update')">Update a Movie</button>
        <button class="tablinks" onclick="openForm(event, 'Delete')">Delete a Movie</button>
     </section>
@@ -101,7 +101,7 @@
           <label for="upYear">Year:</label>
           <input type="text" placeholder="Year..." name="year" id="upYear">
         </div>
-        <button type="button" name="submit">Update Movie</button>
+        <button type="button" name="submit" onclick="updateClick()">Update Movie</button>
       </form>
     </section>
     <!-- End Update Movie section -->
@@ -114,7 +114,7 @@
           <label for="delIndex">Index:</label>
           <input type="text" placeholder="Index..." name="index" id="delIndex">
         </div>
-        <button type="button" name="submit">Delete a Movie</button>
+        <button type="button" name="submit" onclick="deleteClick()">Delete a Movie</button>
       </form>
     </section>
     <!-- End Delete Movie section -->
