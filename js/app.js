@@ -10,6 +10,7 @@ let initMovies = [
 
 // Create an instance of the MovieList class
 // MovieList takes in the rootId and the movie array
+let movieList = new MovieList('list', initMovies);
 
 // Event functions
 // Search Click

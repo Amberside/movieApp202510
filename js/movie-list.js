@@ -32,10 +32,25 @@ class MovieList {
       this.movieRow(movie.title, movie.year);
     }
   }
-  
+
   // Generate a movieList based on a search term
 
   // Remove all list elements from the DOM
+  removeElements(){
+    // Get the parent element
+    const rootElement = document.getElementById(this.rootId);
+    // Get all elements with the class name of row.
+    const childNodes = document.getElementsByClassName('row');
+    // How many children do we have
+    const len = childNodes.length - 1;
+    for(let i = len; i >= 0; i++){
+      // Get the last element in the array
+      const child = childNodes[i];
+      // Remove that element from the DOM
+      rootElement.removeChild(child);
+    }
+  }
+
   // Refresh function
   refresh(){
     this.genMovieList();
