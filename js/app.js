@@ -23,7 +23,13 @@ function searchClick(){
   movieList.search(text);
 }
 // A to Z Click
+function a2zClick(){
+  movieList.sortA2Z();
+}
 // Z to A Click
+function z2aClick(){
+  movieList.sortZ2A();
+}
 
 // CRUD Function
 // C - Create - add new content
